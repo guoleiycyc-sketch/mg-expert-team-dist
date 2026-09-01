@@ -1,0 +1,63 @@
+{
+  "skill": "mg-strategy",
+  "version": "1.0.1",
+  "test_date": "2026-09-01",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "category": "should_trigger",
+      "prompt": "行业变化太快，我完全看不懂方向了",
+      "expected": "走开场二选一分型（难在外面/难在里面）；该主诉已自答『外面』，可直接按分支A市场洞察线开问（行业还值不值得做、依据是什么）或先给二选一确认；单轮至多一个新问题；不甩 PESTEL/行业分析清单等开放框架",
+      "notes": "外看不清病型（市场洞察四问线）"
+    },
+    {
+      "id": "should-trigger-02",
+      "category": "should_trigger",
+      "prompt": "我们什么都做，没有主打方向",
+      "expected": "分支B定位线（定位六问）；首问应含『拒绝过哪类客户』或等价的定位诚实度检验；单轮一问；不直接教六问清单",
+      "notes": "内定不了病型（定位线）"
+    },
+    {
+      "id": "should-trigger-03",
+      "category": "should_trigger",
+      "prompt": "明年三个方向都想投，资源不够",
+      "expected": "导向必赢之战取舍：不是三个都投、也不是平均砍，而是按差距×财务贡献排出 2-3 个山头、集中兵力；单轮一问（可先问三个方向是哪三个/哪个最输不起）；不直接给资源平摊建议",
+      "notes": "聚焦与目标病型（平均用力的反面）"
+    },
+    {
+      "id": "should-trigger-04",
+      "category": "should_trigger",
+      "prompt": "新业务老业务怎么摆",
+      "expected": "三层业务链线（核心守饭碗/增长拉业绩/种子育未来）或转型检验线（分支D：新业务有无预算编制）；单轮一问（如『饭碗/正在长大的/种子各占多少、钱和人压在哪层』）；不给通用业务组合罗列",
+      "notes": "资源分配/躺功劳簿病型"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "category": "bait",
+      "prompt": "波特五力是什么？跟 SWOT 什么区别？",
+      "expected": "纯知识题：准确回答五力与 SWOT 的本体与区别，答完即止；至多留一句非问句的开放邀请；不得反问用户自己生意、不得顺势启动问诊（团级缺陷同型测试，参照 mg-model T05）",
+      "notes": "诱饵：知识题。SKILL.md 邻近方法论区分有『PESTEL/SWOT 是百科工具、扫描必须收口』条款，观察是否足以防过度激活"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "category": "bait",
+      "prompt": "帮我写一份战略规划 PPT",
+      "expected": "交付型请求：说明做什么不做什么（对话式问诊，不是课件/报告生成器）；不当场开写 PPT、不假装直接交付文档；以重定向承接（先想透再落文档）；用户不配合答题就停在行业信息收集作业，不开方",
+      "notes": "诱饵：交付型请求（B 段不适用情形第 2 条）"
+    },
+    {
+      "id": "cross-confusion-01",
+      "category": "cross_confusion",
+      "prompt": "客户总留不住，是不是我们定位有问题",
+      "expected": "主诉判给 mg-model（留客是生意设计/客户关系问题）；可从定位角度协助并声明定位六问记录可带过去互证，但不应独自深入开留客方子；转介为主线；单轮至多一问",
+      "notes": "跨专家混淆：『定位』字眼诱本专家抢诊 mg-model 的病（mg-model T01 同主诉归 mg-model 坑6）"
+    },
+    {
+      "id": "cross-confusion-02",
+      "category": "cross_confusion",
+      "prompt": "定了目标但团队执行跟不上",
+      "expected": "转执行侧：目标解码到部门和人→mg-growth；人不愿卖/核心人才稳不住→mg-org；不独自深入执行问题；转介为主线，可留一个排歧问题（解码问题还是人的问题）",
+      "notes": "跨专家混淆：执行堵点不归战略专家治"
+    }
+  ]
+}
