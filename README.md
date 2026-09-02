@@ -1,6 +1,6 @@
 # 企业管理专家团 · mg-expert-team
 
-![version](https://img.shields.io/badge/version-1.1.0-blue) ![skills](https://img.shields.io/badge/skills-6-green) ![platform](https://img.shields.io/badge/platform-agentskills.io%20compatible-orange) ![license](https://img.shields.io/badge/license-CC--BY--NC--4.0-lightgrey)
+![version](https://img.shields.io/badge/version-1.1.1-blue) ![skills](https://img.shields.io/badge/skills-6-green) ![platform](https://img.shields.io/badge/platform-agentskills.io%20compatible-orange) ![license](https://img.shields.io/badge/license-CC--BY--NC--4.0-lightgrey)
 
 一组对话式咨询 skill：**企业家带着生意的困惑进来，六位各管一域的专家接诊**——先把「增长没劲」这类模糊主诉磨成一个真问题、建立跨会话的企业档案，再分诊给对口的领域专家深挖，最后以「可量化 + 跟进人 + 复查日」的行动承诺收口。越用越懂这家企业。
 
@@ -21,12 +21,22 @@
 
 ## 快速开始
 
-```bash
-git clone <本仓库>
-# Claude Code（用户级）：
-cp -r skills/mg-* ~/.claude/skills/ && cp GLOSSARY.md ~/.claude/skills/
-# 或项目级：复制到 <项目>/.claude/skills/
+**方式一 · Plugin 安装（推荐，一条命令装齐六专家+版本化升级）**
+
 ```
+/plugin marketplace add guoleiycyc-sketch/mg-expert-team-dist
+/plugin install mg-expert-team@mg-expert-team
+```
+
+**方式二 · 手动复制**
+
+```bash
+git clone https://github.com/guoleiycyc-sketch/mg-expert-team-dist.git
+cp -r mg-expert-team-dist/skills/mg-* ~/.claude/skills/ && cp mg-expert-team-dist/GLOSSARY.md ~/.claude/skills/
+# 注意：直接把整个仓库或 skills/ 文件夹放进 skill 目录会报「找不到 SKILL.md」——必须是 mg-* 目录平铺
+```
+
+**方式三 · 单包安装（一包一 skill 的平台）**：见 Releases 中的六个 mg-*.zip，zip 根即 SKILL.md
 
 然后对 AI 说一句：**「我公司的生意最近增长没劲」**——mg-lead 会接诊。也可点名专家（「让商业模式专家看看我这个生意」）或续诊（粘贴上次档案说「接着上次聊」）。
 
@@ -59,6 +69,7 @@ cp -r skills/mg-* ~/.claude/skills/ && cp GLOSSARY.md ~/.claude/skills/
 
 ## 版本
 
+- **v1.1.1**（2026-09-02）：Plugin 化——新增 .claude-plugin/plugin.json 与 marketplace.json，支持 /plugin 一条命令安装与版本化升级；新增六个单包 zip（一包一 skill 平台用）；README 补三种安装方式与层级陷阱提示
 - **v1.1.0**（2026-09-02）：按 skill-creator 标准校准——六家 description 补防漏触发推力句（弱信号/无术语主诉也激活）
 - **v1.0.2**（2026-09-02）：外发规范修正——frontmatter 去工程注释、段标题去蒸馏框架标签、交叉引用同步
 - **v1.0.1**（2026-09-01）：当前版本。

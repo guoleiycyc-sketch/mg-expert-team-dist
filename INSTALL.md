@@ -10,20 +10,21 @@
 
 ## 安装
 
-### Claude Code
-```bash
-# 用户级（所有项目可用）：装到 ~/.claude/skills/
-# 项目级（仅当前项目）：装到 <项目>/.claude/skills/
-# 把本包 skills/ 下六个 mg-* 目录复制过去，外加 GLOSSARY.md：
-cp -r skills/mg-* ~/.claude/skills/
-cp GLOSSARY.md ~/.claude/skills/
+### 方式一 · Claude Code Plugin（推荐）
+
+```
+/plugin marketplace add guoleiycyc-sketch/mg-expert-team-dist
+/plugin install mg-expert-team@mg-expert-team
 ```
 
-### 其他 agentskills.io 兼容平台（如 WorkBuddy）
-按平台文档找到 skill 目录（通常为 `~/.agents/skills/` 或应用内 skill 管理入口），同样放置六个 `mg-*` 目录与 `GLOSSARY.md`。每个 skill 自包含，可独立安装，但六位合装才有完整分诊闭环。
+一条命令装齐六专家，支持版本化升级（/plugin update mg-expert-team）。
 
-### 企业档案存放
-专家会按平台自适应处理：有文件读写能力的环境落盘 `咨询档案/<企业简称>-档案.md`；无文件能力的环境会在会话末输出档案全文，请自行保存、续诊时粘贴回来。档案含敏感经营数据，仅存本地。
+### 方式二 · 手动复制（Claude Code / 其他 agentskills.io 平台）
+把 skills/ 下六个 mg-* 目录平铺到平台 skill 目录（如 ~/.claude/skills/）。
+⚠️ 不要把整个仓库或 skills/ 文件夹整个放进去——skill 目录的每个一级子目录必须直接含 SKILL.md，否则报「找不到 SKILL.md」。
+
+### 方式三 · 单包上传（一包一 skill 的平台，如部分 WorkBuddy 部署）
+用 Releases 里的六个 mg-*.zip——zip 根就是 SKILL.md，逐个上传即可（各包已自带 GLOSSARY.md，可独立安装）。
 
 ## 使用（三种开始方式）
 

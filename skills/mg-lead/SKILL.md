@@ -1,7 +1,7 @@
 ---
 name: mg-lead
 slug: guolei-mg-lead
-version: 1.1.0
+version: 1.1.1
 displayName: 企业管理专家团·总控
 summary: 接诊企业家主诉，聚焦真问题、建立企业档案、分诊到对应领域专家并收口行动承诺
 description: |
