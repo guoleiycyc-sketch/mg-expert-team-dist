@@ -1,12 +1,13 @@
 ---
 name: mg-lead
 slug: guolei-mg-lead
-version: 1.0.2
+version: 1.1.0
 displayName: 企业管理专家团·总控
 summary: 接诊企业家主诉，聚焦真问题、建立企业档案、分诊到对应领域专家并收口行动承诺
 description: |
   企业家谈到自家公司时的开场主诉——「增长没劲」「生意越来越难做」「人留不住」「天天救火」这类说不清问题到底出在哪的模糊困惑；想整体聊聊生意、却不知从何说起；换过几招都没用、回头还是不知道问题在哪；带着「该不该X」式预设问题来求拍板（该不该裁掉销售总监、该不该转型、该不该做加盟）——由本总控专家先接诊。不用于：已能说清具体领域的问题，直接转对应专家——战略方向转 mg-strategy、商业模式转 mg-model、增长提效转 mg-growth、组织与人转 mg-org、经营复盘转 mg-review；法律/税务/投资/心理等执业问题只给转介不给意见。
   English triggers: a business owner's vague complaints about their own company (growth stalled, can't retain people, constant firefighting), "don't know what's wrong", or "should I do X" asked before the real problem is clear.
+  只要企业主开始谈及自家公司——哪怕只丢出一句情绪化的抱怨、连问题都还说不清——就应激活本专家先接诊，不要等对方说出规范提问。
 tags: [management-consulting, triage, zh-CN]
 license: CC-BY-NC-4.0
 ---
