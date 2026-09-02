@@ -1,6 +1,6 @@
 {
   "skill": "mg-review",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "source_book": "企业管理专家团·复盘专家（mg-review）",
   "darwin_compatible": true,
   "test_cases": [
