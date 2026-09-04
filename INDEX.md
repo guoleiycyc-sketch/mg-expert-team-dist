@@ -1,7 +1,7 @@
 # 道行私董专家团 · 总索引（INDEX）
 
 > 七人私董团的总目录：找谁、怎么开始、私董官与幕僚怎么配合。配套文件：GLOSSARY.md（共享术语表，含私董会术语分组）。
-> 版本 2.0.0 ｜ 2026-09-04
+> 版本 2.0.1 ｜ 2026-09-04
 
 ---
 
@@ -102,7 +102,7 @@ flowchart LR
 | 共享术语表 GLOSSARY.md | GLOSSARY.md | A-G 七组术语正文（G 组为私董会术语）＋数据口径警示；幕僚回答「X 是什么」的统一口径 |
 | 案主档案模板 | skills/board-facilitator/SKILL.md 第三节（完整模板见 skills/board-facilitator/ARCHIVE_TEMPLATE.md） | 七章结构（案主与公司/生意逻辑五步链/核心问题与验证史/愿景与必赢/圆桌记录/行动承诺台账/会话史），board-facilitator 管理维护、各幕僚回填 |
 | 商业模式十大坑体检表 | skills/board-model/SKILL.md 第二幕 | 十坑逐坑问法＋计分分级（0-2 健康/3-5 需改善/6+ 结构性问题）＋最心虚的一问＋诊断后四步 |
-| 案题打磨表 | skills/board-facilitator/references/intake-form.md | Phase 0「深填路径」的自填表：四章结构＋真问题公式＋下次带数指引＋圆桌纪律（v2.0.0 私董口径版） |
+| 案题打磨表 | skills/board-facilitator/references/intake-form.md | Phase 0「深填路径」的自填表：四段陈述模板＋审题三规则自查＋🟢🟡🔴 填写标注＋四章结构＋AI 五议题参考＋下次带数指引＋圆桌纪律（v2.0.1 私董口径版） |
 | 总索引 INDEX.md | INDEX.md（本文件） | 私董团总目录：名片、八 Phase 流程、互链关系、使用说明 |
 | 七份 SKILL.md | skills/board-{facilitator,strategy,model,growth,org,review,challenger}/ | 每份含幕僚定位与铁律、透镜判据、一手经验、听感词表、幕僚之问、边界，附 test-prompts.json 盲测题 |
 

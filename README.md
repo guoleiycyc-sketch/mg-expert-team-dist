@@ -1,6 +1,6 @@
 # 道行私董专家团 · mg-expert-team
 
-![version](https://img.shields.io/badge/version-2.0.0-blue) ![skills](https://img.shields.io/badge/skills-7-green) ![platform](https://img.shields.io/badge/platform-agentskills.io%20compatible-orange) ![license](https://img.shields.io/badge/license-CC--BY--NC--4.0-lightgrey)
+![version](https://img.shields.io/badge/version-2.0.1-blue) ![skills](https://img.shields.io/badge/skills-7-green) ![platform](https://img.shields.io/badge/platform-agentskills.io%20compatible-orange) ![license](https://img.shields.io/badge/license-CC--BY--NC--4.0-lightgrey)
 
 一组对话式私董 skill：**企业主带着生意的困惑进来，一位私董官带六位幕僚开圆桌**——先把「增长没劲」这类模糊主诉磨成一个真问题（案题）、建立跨会话的案主档案，再由各透镜幕僚提问与反馈深挖，最后以「可量化 + 监督人 + 复查日」的行动承诺收口。幕僚只提问不给建议，给建议必以「如果我是你」开头；所有人都同意时，黑帽子幕僚必须不同意。越用越懂这家企业。
 
@@ -74,6 +74,7 @@ v1.x 六件 48 条盲测（应触发 / 诱饵 / 跨专家混淆三类）+ 回炉
 
 ## 版本
 
+- **v2.0.1**（2026-09-04）：《私董官培训课程》校准合入——私董官 board-facilitator：开场三约定（不评判/不打断/不剧透）、保密升级为查塔姆守则口径、审题三规则（与「你要答案就别来」红线并列）、准备度自评、案题陈述四段模板、幕僚之问三类事故拦截＋冷场重启＋笔记规则、真问题重构改序五步（案主先说→幕僚候选→私董官合成→案主亲口定稿→公式检验）＋三条警戒线＋冲突挖掘法、承诺颗粒度追问＋会后三节点（D+1 感谢问卷/D+7 监督人跟进/D+30 案主汇报）、幕僚层复盘三问、控场话术八句、场记报告（AI 私董官独有）、护栏补案主中止权与情绪不强行推进；六件幕僚 SKILL.md 头部加「角色锦囊心法」段、纪律段加「心智模式层不当面问」；案题打磨表换四段模板＋审题三规则自查＋🟢🟡🔴 填写标注＋AI 五议题参考段（课程第 6 讲）；GLOSSARY G 组新增 6 词条（选题三规则/查塔姆守则/心智模式四特点/不给建议的四原因/场记报告/准备度自评）；board-review 增补执行力归因触发词（「问题是员工执行力差」先经五个为什么剥到机制层，确属意愿问题才转 board-org）
 - **v2.0.0**（2026-09-04）：私董化大版本——团名升级「道行私董专家团」，mg-* 六件全量改名 board-*（skill 目录/frontmatter name/slug 三处同步，旧 guolei-mg-* slug 作废）；五环节流程重构为私董八 Phase（案前打磨/案题陈述/幕僚之问/真问题重构/隔墙有耳/幕僚反馈三段式/承诺收口/送一朵小红花），新增真问题公式、倾听四层、「如果我是你」通道、监督人只能一位等私董纪律；新增第六位幕僚 board-challenger 黑帽子邓不同（专职唱反调）；术语全量换轨（案主/幕僚/私董官/圆桌/定向）；GLOSSARY 新增私董会术语分组；全部方法论资产（五步假设链/崩塌测试/差距二分/档案七章/红旗表/判据/剧本/案例/口径警示）原样保留为私董官与幕僚的工具
 - **v1.2.0**（2026-09-04）：私董会引导融入——原 mg-lead 新增首场双路径（快诊直接开聊／深备先填《案题打磨引导表》，新附 references/案题打磨引导表.md）、「期待的专家画像」定向佐证、「成功的一天」愿景练习、收口四问（先选最触动您的专家为主线）与圆桌带数指引；GLOSSARY 引用补路径说明
 - **v1.1.1**（2026-09-02）：Plugin 化——新增 .claude-plugin/plugin.json 与 marketplace.json，支持 /plugin 一条命令安装与版本化升级；新增六个单包 zip（一包一 skill 平台用）；README 补三种安装方式与层级陷阱提示

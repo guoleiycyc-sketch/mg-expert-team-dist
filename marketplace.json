@@ -9,7 +9,7 @@
       "name": "mg-expert-team",
       "source": "./",
       "description": "道行私董专家团：七件对话式私董 skill（board-facilitator 私董官/board-strategy 战略幕僚/board-model 商业模式幕僚/board-growth 增长幕僚/board-org 组织幕僚/board-review 复盘幕僚/board-challenger 黑帽子幕僚）。企业主带着生意困惑进来，私董官先磨案题、建案主档案、主持幕僚圆桌（只提问不给建议，建议走「如果我是你」通道），以可量化行动承诺收口。agentskills.io 兼容，纯对话型不依赖专有工具。",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "郭磊 GuoLei"
       },
@@ -31,5 +31,5 @@
       ]
     }
   ],
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
