@@ -1,6 +1,6 @@
 {
-  "skill": "mg-strategy",
-  "version": "1.1.1",
+  "skill": "board-strategy",
+  "version": "2.0.0",
   "test_date": "2026-09-01",
   "test_cases": [
     {
@@ -35,29 +35,29 @@
       "id": "should-not-trigger-01",
       "category": "bait",
       "prompt": "波特五力是什么？跟 SWOT 什么区别？",
-      "expected": "纯知识题：准确回答五力与 SWOT 的本体与区别，答完即止；至多留一句非问句的开放邀请；不得反问用户自己生意、不得顺势启动问诊（团级缺陷同型测试，参照 mg-model T05）",
+      "expected": "纯知识题：准确回答五力与 SWOT 的本体与区别，答完即止；至多留一句非问句的开放邀请；不得反问用户自己生意、不得顺势启动圆桌问询（团级缺陷同型测试，参照 board-model T05）",
       "notes": "诱饵：知识题。SKILL.md 邻近方法论区分有『PESTEL/SWOT 是百科工具、扫描必须收口』条款，观察是否足以防过度激活"
     },
     {
       "id": "should-not-trigger-02",
       "category": "bait",
       "prompt": "帮我写一份战略规划 PPT",
-      "expected": "交付型请求：说明做什么不做什么（对话式问诊，不是课件/报告生成器）；不当场开写 PPT、不假装直接交付文档；以重定向承接（先想透再落文档）；用户不配合答题就停在行业信息收集作业，不开方",
+      "expected": "交付型请求：说明做什么不做什么（对话式圆桌，不是课件/报告生成器）；不当场开写 PPT、不假装直接交付文档；以重定向承接（先想透再落文档）；用户不配合答题就停在行业信息收集作业，不给建议",
       "notes": "诱饵：交付型请求（B 段不适用情形第 2 条）"
     },
     {
       "id": "cross-confusion-01",
       "category": "cross_confusion",
       "prompt": "客户总留不住，是不是我们定位有问题",
-      "expected": "主诉判给 mg-model（留客是生意设计/客户关系问题）；可从定位角度协助并声明定位六问记录可带过去互证，但不应独自深入开留客方子；转介为主线；单轮至多一问",
-      "notes": "跨专家混淆：『定位』字眼诱本专家抢诊 mg-model 的病（mg-model T01 同主诉归 mg-model 坑6）"
+      "expected": "主诉判给 board-model（留客是生意设计/客户关系问题）；可从定位角度协助并声明定位六问记录可带过去互证，但不应独自深入开留客方子；转介为主线；单轮至多一问",
+      "notes": "跨幕僚混淆：『定位』字眼诱本幕僚抢诊 board-model 的病（board-model T01 同主诉归 board-model 坑6）"
     },
     {
       "id": "cross-confusion-02",
       "category": "cross_confusion",
       "prompt": "定了目标但团队执行跟不上",
-      "expected": "转执行侧：目标解码到部门和人→mg-growth；人不愿卖/核心人才稳不住→mg-org；不独自深入执行问题；转介为主线，可留一个排歧问题（解码问题还是人的问题）",
-      "notes": "跨专家混淆：执行堵点不归战略专家治"
+      "expected": "转执行侧：目标解码到部门和人→board-growth；人不愿卖/核心人才稳不住→board-org；不独自深入执行问题；转介为主线，可留一个排歧问题（解码问题还是人的问题）",
+      "notes": "跨幕僚混淆：执行堵点不归战略幕僚治"
     }
   ]
 }

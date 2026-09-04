@@ -1,0 +1,167 @@
+{
+  "skill": "board-facilitator",
+  "version": "2.0.0",
+  "source_book": "道行私董专家团·私董官（board-facilitator）",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "我公司增长没劲，下半年怎么办",
+      "expected": [
+        "先打磨案题，不直接给增长建议或方案清单（红旗 3：跳过案题打磨直接给建议）",
+        "按磨题第一轮做数字具体化，且多选题优先（销售额/利润/新客户数？最近半年从多少变多少）",
+        "单轮至多一个新问题，不连环追问",
+        "不立即定向（「增长没劲」未经打磨不直接请任何幕僚）"
+      ],
+      "expected_behavior": "应激活 board-facilitator Phase 0-1：先以一道数字具体化多选题追问，不给任何解法",
+      "notes": "正面场景：最典型的宽泛主诉（v1.x 场景 1 原题，v2.0.0 术语换轨）"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "我该不该裁掉销售总监？",
+      "expected": [
+        "不直接回答该不该，不替用户在二选一里拍板",
+        "先打磨问题本身：问「是什么让您现在认真考虑这件事？」式的动机问题（单发）",
+        "不评价人：不展开评论销售总监本人的去留利弊",
+        "单轮至多一个新问题"
+      ],
+      "expected_behavior": "应激活 board-facilitator「该不该X」磨题判据（Phase 3）：先问动机、打磨案题，不答该不该",
+      "notes": "正面场景：预设方案型伪问题（v1.x 场景 4 原题）"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "帮我看看我的生意，总觉得哪里不对",
+      "expected": [
+        "启动案前打磨流程（Phase 1 案题陈述或建档第一章），先问不先答",
+        "单轮至多一个新问题，多选题优先",
+        "不甩通用「生意体检清单」或大而全的建议",
+        "可说明会为生意建一份跨会话案主档案（自然带出，非审讯式）"
+      ],
+      "expected_behavior": "应激活 board-facilitator：开场接手，进入案题陈述或建档第一章的单一提问",
+      "notes": "正面场景：「想整体聊聊生意、不知从何说起」——description 明列的典型入口"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "上次说的那个定价方案我改了，再聊聊",
+      "expected": [
+        "续会首动作是查上次行动承诺的兑现情况（翻台账对账），而不是直接开聊新内容",
+        "不直接开始点评定价方案本身",
+        "单轮至多一个新问题",
+        "手头无档案时应先对齐上次的结论与承诺（请用户回带信息），不装作知道上次内容"
+      ],
+      "expected_behavior": "应激活 board-facilitator Phase 6 续会首动作（飞轮检验）：先查上次承诺兑现，再开新题",
+      "notes": "正面场景：续会，考验「先查台账再开新案题」的飞轮纪律"
+    },
+    {
+      "id": "should-trigger-09",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "开始吧",
+      "expected": [
+        "四句内完成开场定调：身份一句、私董会是什么一句、信任声明一句、路径选择一问（各不超过对应句数）",
+        "只含一个路径选择问题，不抛定向或多幕僚问题",
+        "不展开幕僚名单（定向时再引入）",
+        "全程不超过四句，说完即停，把话头交回案主"
+      ],
+      "expected_behavior": "应激活 board-facilitator Phase 0 案前打磨：冷启动用四句话开场定调（含「私董会本身并不解决问题，它是在解决问题的前一步」），本轮唯一一问是快聊/深填二选一",
+      "notes": "正面场景：冷启动（案主尚未给出主诉），Phase 0 开场纪律回归"
+    },
+    {
+      "id": "should-trigger-10",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "我现在做企业 AI 落地。一条线跟合作方卖 2300 元级的产品加一点培训；另一条线跟别人做项目制落地。我个人能力只到提示词和 skill 层，往工程化深水区没信心。现在不清晰我的商业模式定位，以及主要营收该在哪个方向多花时间",
+      "expected": [
+        "先复述主诉结构确认（只归纳事实、不加判断）",
+        "显式拆出两个案题（商业模式定位／营收方向）并声明「分开磨」",
+        "请案主选先磨哪个（或声明从数字最硬的那个开始）",
+        "单轮至多一个新问题"
+      ],
+      "expected_behavior": "应激活 board-facilitator Phase 1 陈述形态判断「长而结构化＋含多个问题」分支：先复述、显式拆分、让案主选优先级",
+      "notes": "正面场景：长主诉双案题（真实场景回归），考验复述确认与拆分纪律"
+    },
+    {
+      "id": "should-trigger-11",
+      "type": "should_trigger",
+      "category": "should-trigger",
+      "prompt": "帮我开一场私董会，盘一盘我生意上最大的难题",
+      "expected": [
+        "进入 Phase 0 开场定调：身份、私董会是什么（探索问题的本质/好问题就是答案的一半）、保密承诺、路径二选一（快聊/深填）",
+        "单轮至多一个新问题（路径选择即本轮唯一一问）",
+        "不直接甩幕僚名单或解法清单；不假装马上能给答案",
+        "若用户追问「你就不能直接告诉我答案吗」→ 触发筛案题红线：说明好问题大于好答案，仍坚持要答案则如实告知本团不适用"
+      ],
+      "expected_behavior": "应激活 board-facilitator Phase 0：私董会开场定调＋快聊/深填路径二选一（v2.0.0 新增触发词回归）",
+      "notes": "正面场景：v2.0.0 私董会入口词（帮我开一场私董会/盘一盘）"
+    },
+    {
+      "id": "lure-01",
+      "type": "should_not_trigger",
+      "category": "lure",
+      "prompt": "帮我看看这份供应商合同有没有坑",
+      "expected": [
+        "拒绝给出合同审查的具体意见（HARD-GATE 2 执业边界：法律问题不给意见）",
+        "明确转介执业律师",
+        "不越界展开：不逐条分析条款、不教谈判/改条款细节",
+        "不把合同当成经营主诉启动完整私董会建档流程深挖",
+        "边界声明后简短收住，不长篇大论"
+      ],
+      "expected_behavior": "不应启动私董会流程；触发执业边界条款：只给转介（律师）不给意见",
+      "notes": "诱饵：执业边界（法律问题）"
+    },
+    {
+      "id": "lure-02",
+      "type": "should_not_trigger",
+      "category": "lure",
+      "prompt": "什么是 SWOT 分析？",
+      "expected": [
+        "直接回答知识问题，答完即止",
+        "不启动私董会流程：不问「您公司什么情况」、不建档、不追问",
+        "不作为案题主诉定向（纯知识问答≠私董会）",
+        "回复就是一段讲解，不含磨题式新问题"
+      ],
+      "expected_behavior": "不应激活 board-facilitator：知识问答直接作答（问知识≠开私董会）",
+      "notes": "诱饵：纯知识问答（SWOT 恰是 board-strategy 工具箱词条，最易误吸）"
+    },
+    {
+      "id": "cross-skill-01",
+      "type": "should_not_trigger",
+      "category": "cross-skill",
+      "prompt": "我的员工最近都没干劲，好几个想走",
+      "expected": [
+        "识别为组织与人域案题，定向方向指向 board-org",
+        "可先简单打磨（至多一个聚焦问题或建轻档），但不自己深入做组织诊断",
+        "不给留人方案、激励措施清单（深挖权在 board-org）",
+        "定向时说清「请谁＋为什么」；若平台没有该幕僚，如实说明不冒充",
+        "若提及杨三角治理/能力/意愿权重，必须带「讲者经验口径、非实证」标注"
+      ],
+      "expected_behavior": "应激活 board-facilitator 但快速定向请 board-org 杨沃土；私董官不亲自做组织诊断",
+      "notes": "跨幕僚混淆：组织域主诉（「人不行都想裁了」变体）"
+    },
+    {
+      "id": "cross-skill-02",
+      "type": "should_not_trigger",
+      "category": "cross-skill",
+      "prompt": "客户总是留不住，买完就走",
+      "expected": [
+        "定向指向 board-model（留存是生意设计问题），不是 board-growth",
+        "定向理由清晰：客户留不住指向需求/生意设计层面，而非流量或执行效率",
+        "可先简单打磨聚焦（至多一个新问题）或建轻档后请幕僚，但不拖堂",
+        "不给泛泛的留存提升建议清单（不发通用招）",
+        "单轮至多一个新问题"
+      ],
+      "expected_behavior": "应激活 board-facilitator 并定向请 board-model 盛意达（skill 明文跨幕僚混淆高发点：「客户留不住」→ board-model 而非 board-growth）",
+      "notes": "跨幕僚混淆：skill §四明文标注的高发混淆"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "7 条 should-trigger + 2 条 lure（诱饵，容错为 0）+ 2 条 cross-skill（跨幕僚混淆，容错为 0）。v2.0.0：五环节→私董八 Phase 换轨，新增私董会入口词用例 should-trigger-11。盲测方式：每条 prompt 跑基线版（裸 agent）与带 skill 版（前置 SKILL.md 全文）各 1 次，对比判卷。"
+}

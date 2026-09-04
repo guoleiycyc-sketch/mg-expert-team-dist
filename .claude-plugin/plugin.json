@@ -1,7 +1,7 @@
 {
   "name": "mg-expert-team",
-  "description": "企业管理专家团：六位对话式咨询 skill（总控/战略/商业模式/增长/组织/复盘），企业家带着生意困惑进来，先磨真问题、建企业档案，再分诊深挖、行动承诺收口",
-  "version": "1.2.0",
+  "description": "道行私董专家团：七件对话式私董 skill（私董官/战略/商业模式/增长/组织/复盘/黑帽子幕僚），企业主带着生意困惑进来，私董官先磨案题、建案主档案、主持幕僚圆桌，以「可量化+监督人+复查日」行动承诺收口",
+  "version": "2.0.0",
   "author": {
     "name": "郭磊 GuoLei"
   },
@@ -9,8 +9,9 @@
   "repository": "https://github.com/guoleiycyc-sketch/mg-expert-team-dist",
   "license": "CC-BY-NC-4.0",
   "keywords": [
+    "peer-advisory",
+    "private-board",
     "management-consulting",
-    "business-diagnosis",
     "skills",
     "zh-CN",
     "expert-team"
