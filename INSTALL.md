@@ -1,6 +1,6 @@
 # 企业管理专家团 · 安装与使用说明
 
-> 版本 1.0.2（2026-09-01）｜六位专家：mg-lead 总控 / mg-strategy 战略 / mg-model 商业模式 / mg-growth 增长 / mg-org 组织 / mg-review 复盘
+> 版本 1.2.0（2026-09-04）｜六位专家：mg-lead 总控 / mg-strategy 战略 / mg-model 商业模式 / mg-growth 增长 / mg-org 组织 / mg-review 复盘
 
 ## 这是什么
 
