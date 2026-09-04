@@ -51,7 +51,7 @@
 4. 逐个预检：`skillhub publish <skill目录> --dry-run`（frontmatter 已含 slug/version/displayName，lint 已过）
 5. 发布：`skillhub publish <skill目录> --changelog "首次发布"`
 
-slug 已带 `guolei-` 前缀防全网撞名。license 当前为 CC-BY-NC-4.0（未定稿，公开发布前请确认）。
+slug 已带 `guolei-` 前缀防全网撞名。license 为 CC-BY-NC-4.0（禁止商用、署名转载）。
 
 ## 质量说明
 

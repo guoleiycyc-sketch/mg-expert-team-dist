@@ -9,7 +9,7 @@
       "name": "mg-expert-team",
       "source": "./",
       "description": "企业管理专家团：六位对话式咨询 skill（mg-lead 总控/mg-strategy 战略/mg-model 商业模式/mg-growth 增长/mg-org 组织/mg-review 复盘）。企业家带着生意困惑进来，总控先磨真问题、建企业档案，分诊给领域专家深挖，以可量化行动承诺收口。agentskills.io 兼容，纯对话型不依赖专有工具。",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "author": {
         "name": "郭磊 GuoLei"
       },
